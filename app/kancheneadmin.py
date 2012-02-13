@@ -62,16 +62,19 @@ class IndexHandler(BaseHandler):
         key = '%s%s' % (kanchene.cacheKey, type)
         searchkey = 'id:(%s)' % ids.replace(',', ' ')
         ps = models.getProgramsByKey(searchkey, 0, 10)
+	#print ps
         programList = []
         for i in ids.split(','):
             if None == i or '' == i:    
                 continue
             for p in ps:
-                if i != p['id']:
+                if int(i) != p['id']:
                     continue
                 programList.append(p)
                 break
         js = tornado.escape.json_encode(programList)
+	#print programList
+	#print js
         r = redis.Redis(connection_pool=kanchene.cachePool)
         r.setex(key, time =config.CACHE['time_out'], value = js)
         self.redirect('%sadmin/index.htm?msg=ok' % (config.KANCHENE['domain']))

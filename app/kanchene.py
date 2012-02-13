@@ -31,7 +31,8 @@ class IndexHandler(BaseHandler):
         r = redis.Redis(connection_pool=cachePool)
         key = '%smain' % (cacheKey)        
         ps['show'] = r.get(key)
-        if None == ps['show']:
+	#print ps['show']
+        if None == ps['show'] or ps['show'] == '[]':
             show = models.getProgramByID(363736)
             ps['show'] = show['program']
         else:
