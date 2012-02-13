@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>{{ title }}</title>
+</head>
+<body>
+<input type="text" id="txtKey" name="txtKey" value="{{ keyword }}" style="width:240px; height:25px; font-size:22px;" />
+<input type="button" value="搜索" style="width:100px; height:30px;" /><br /><br />
+<select id="page" name="page" onchange="selectpage('page')" style="width:240px; height:30px;">
+{% for i in range(1,50) %}
+    {% if page == i %}
+        <option value="{{i}}" selected>第{{i}}页</option>
+    {% else %}
+        <option value="{{i}}">第{{i}}页</option>
+    {% end %}
+{% end %}
+</select>
+<br /><br />
+<table border="0" cellspacing="1" cellpadding="0" style="background-color: #e6e6e6;
+    width: 700px; font-size: 12px;">
+    <tr>
+        <td style="background-color: #fff; height: 28px; width:60px;">
+            选择节目
+        </td>
+        <td style="background-color: #fff;width:60px;">
+            ID
+        </td>
+        <td style="background-color: #fff;width:180px;">
+            Title
+        </td>
+        <td style="background-color: #fff;width:80px;">
+            Time
+        </td>
+        <td style="background-color: #fff;width:160px;">
+            KeyWords
+        </td>
+        <td style="background-color: #fff;width:60px;">
+            Site
+        </td>
+    </tr>
+    {% for p in data['data'] %}
+    <tr>
+        <td style="background-color: #fff; height: 28px;">
+            <input type="checkbox" onclick="selectvideo({{ p['id'] }})" id="v_{{p['id']}}" name="v_{{p['id']}}"></input><label for="v_{{p['id']}}">选择</label>
+        </td>
+        <td style="background-color: #fff;">
+            {{p['id']}}
+        </td>
+        <td style="background-color: #fff;">
+            {{p['title']}}
+        </td>
+        <td style="background-color: #fff;">
+            {{p['createDate']}}
+        </td>
+        <td style="background-color: #fff;">
+            {{p['tags']}}
+        </td>
+        <td style="background-color: #fff;">
+            {{p['site']}}
+        </td>
+    </tr>
+    {% end %}
+</table>
+<br />
+<select id="page2" name="page2" onchange="selectpage('page2')" style="width:240px; height:30px;">
+{% for i in range(1,50) %}
+    {% if page == i %}
+        <option value="{{i}}" selected>第{{i}}页</option>
+    {% else %}
+        <option value="{{i}}">第{{i}}页</option>
+    {% end %}
+{% end %}
+</select>
+<div style="height: 10px;">
+</div>
+    <script language="javascript" type="text/javascript">
+        function selectvideo(vid) {
+            if (document.getElementById('v_' + vid).checked)
+                self.opener.select(vid);
+            else
+                self.opener.unselect(vid);
+        }
+        function selectpage(id){
+            var page = document.getElementById(id).value;
+            var txtKey = document.getElementById('txtKey').value;
+            window.location.href = 'search.htm?page='+page+'&txtKey='+ encodeURIComponent(txtKey);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+{% extends "../base.htm" %}
+{% block head %}
+{% end %}
+{% block body %}
+<div class="body">
+    <form action="{{ request.path }}" method="post">
+    <input type="button" id="selectvideo" value="选择视频" onclick="javascript:selectvideoInfo();"style="width:100px; height:25px;" /><br /><br />
+    类型：<select id="videoType" name="videoType">
+    <option value="main">首页播放器</option>
+    <option value="guanggao">广告</option>
+    <option value="biaoche">飙车</option>
+    <option value="wanche">玩车</option>
+    <option value="bisai">比赛</option>
+    </select>
+    <br />
+    视频ID：<input id="videoIDs" name="videoIDs" type="text"  style="width:700px; height:30px; font-size:22px;" /><br />
+    <br /><br />
+    <input type="submit" value="提交" style="width:100px; height:30px;" />
+    </form>
+</div>
+<div style="height: 10px;">
+</div>
+<script language="javascript" type="text/javascript">
+
+    function selectvideoInfo() {
+        window.open('search.htm?q='+$('#videoType').val());
+    }
+    function select(vid) {
+        var val = $('#videoIDs').val();
+        var vals = val.split(',');
+        var index = 0;
+        for(var i = 0; i< vals.length; i++){
+            if(vals[i] == ''){
+                continue;
+            }
+            index++;           
+        }
+        if(index > 9){
+            alert('超过数量啦!');
+            return;
+        }        
+        $('#videoIDs').val(val + ',' + vid);
+    }
+    function unselect(vid) {
+        $('#videoIDs').val($('#videoIDs').val().replace(',' + vid, ''));
+    }
+</script>
+{% end %}

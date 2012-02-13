@@ -1,0 +1,22 @@
+{% extends "base.htm" %}
+{% block head %}
+<meta http-equiv="Refresh" content="5; url=http://www.kanchene.com/" />{% end %}
+{% block body %}
+<div class="body">
+    <div class="block10">
+    </div>
+    <div style="width:100%; text-align:center;">
+        <h1 style="font-size:24px;font-weight:bold;">抱歉,页面无法找到^o^</h1><br />
+        <a href="http://www.kanchene.com/">看啥呢 - 提供专业汽车,车展,美女,选车,新车视频搜索在线观看服务</a><br /><br />
+         5秒后返回首页......<br /><br /></div>
+    <img src="{{ imgdomain }}404.jpg" title="页面无法找到" alt="页面无法找到" style="height: 312px; width: 512px;" />
+    <div style="width:100%; text-align:center;">
+           </div>    
+</div>
+<script language="javascript" type="text/javascript">        
+$(document).ready(function(){        
+    $('#qh_con0')[0].style.display="block";
+    $('#mynav0')[0].className="nav_on";    
+});
+</script>
+{% end %}

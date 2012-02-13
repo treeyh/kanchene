@@ -1,0 +1,48 @@
+{% extends "../base.htm" %}
+{% block head %}
+<style type="text/css">
+    table
+    {
+        border-collapse: collapse;
+        border: none;
+        width: 600px;
+    }
+    td
+    {
+        border: solid #000 1px;
+        height: 40px;
+    }
+</style>
+{% end %}
+{% block body %}
+<form action="{{ action }}" method="post">
+<table>
+    <tr>
+        <td colspan="2" valign="middle" align="left">
+            管理员登录：            
+        </td>
+    </tr>
+    <tr>
+        <td>
+            用户名：
+        </td>
+        <td>
+            <input type="text" id="user" name="user" style="width:240px; height:25px; font-size:22px;" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            密码：
+        </td>
+        <td>
+            <input type="password" id="password" name="password" style="width:240px; height:25px; font-size:22px;" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" valign="middle" align="center">
+            <input type="submit" value="登录" style="width:100px; height:30px;" />
+        </td>
+    </tr>
+</table>
+</form>
+{% end %}

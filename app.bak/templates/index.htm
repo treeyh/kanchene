@@ -1,0 +1,240 @@
+{% extends "base.htm" %}
+{% block head %}{% end %}
+{% block body %}
+<div class="left">
+    <div class="main">
+        <div class="m">
+            <div class="txt">
+                <h1>{{ main['title'] }}</h1>
+            </div>
+            <div class="v">
+                <embed style="position: relative;" src="{{ main['swf'] }}" quality="high" width="300" height="250" align="left" allowfullscreen="true" wmode="opaque" allowscriptaccess="always" type="application/x-shockwave-flash"></embed>
+            </div>
+        </div>
+        <div class="r">
+            <script type="text/javascript"><!--
+                          google_ad_client = "pub-4704068025965026";
+                          /* 看车呢首页图片_336x280, 创建于 10-8-2 */
+                          google_ad_slot = "2290925486";
+                          google_ad_width = 336;
+                          google_ad_height = 280;
+                          google_language = 'zh-CN'; 
+  //-->
+                      </script>
+            <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+        </div>
+    </div>
+    <div class="block5"> </div>
+    <div class="box">
+        <div class="channel"> 车展 </div>
+        <div class="block5_1"> </div>
+        {% set indexcount = 0 %}
+        {% for c in index['chezhan']['data'] %}
+        {% set indexcount = indexcount + 1 %}
+        <div class="item">
+            <div class="pic"> <a class="inner" target="_blank" title="{{ c['title'] }}" href="{{ domain }}v/{{ c['id'] }}.htm"> <img height="96" width="128" alt="{{ c['title'] }}" src="{{ c['cover'] }}" /></a></div>
+            <div class="txt">
+                <h6 class="caption"> <a target="_blank" title="{{ c['title'] }}" href="{{ domain }}v/{{ c['id'] }}.htm">{{ c['showtitle'] }}</a></h6>
+            </div>
+        </div>
+        {% if indexcount % 4 == 0 %}
+        <div class="clear"> </div>
+        {% end %} {% end  %}
+        <div class="clear"> </div>
+    </div>
+    <div class="block5"> </div>
+    <div class="box">
+        <div class="channel"> 美女 </div>
+        <div class="block5_1"> </div>
+        {% set indexcount = 0 %}
+        {% for c in index['meinv']['data'] %}
+        {% set indexcount = indexcount + 1 %}
+        <div class="item">
+            <div class="pic"> <a class="inner" target="_blank" title="{{ c['title'] }}" href="{{ domain }}v/{{ c['id'] }}.htm"> <img height="96" width="128" alt="{{ c['title'] }}" src="{{ c['cover'] }}" /></a></div>
+            <div class="txt">
+                <h6 class="caption"> <a target="_blank" title="{{ c['title'] }}" href="{{ domain }}v/{{ c['id'] }}.htm">{{ c['showtitle'] }}</a></h6>
+            </div>
+        </div>
+        {% if indexcount % 4 == 0 %}
+        <div class="clear"> </div>
+        {% end %} {% end %}
+        <div class="clear"> </div>
+    </div>
+    <div class="block5"> </div>
+    <div class="box">
+        <div class="channel"> 广告 </div>
+        <div class="block5_1"> </div>
+        {% set indexcount = 0 %}
+        {% for c in index['guanggao']['data'] %}
+        {% set indexcount = indexcount + 1 %}
+        <div class="item">
+            <div class="pic"> <a class="inner" target="_blank" title="{{ c['title'] }}" href="{{ domain }}v/{{ c['id'] }}.htm"> <img height="96" width="128" alt="{{ c['title'] }}" src="{{ c['cover'] }}" /></a></div>
+            <div class="txt">
+                <h6 class="caption"> <a target="_blank" title="{{ c['title'] }}" href="{{ domain }}v/{{ c['id'] }}.htm">{{ c['showtitle'] }}</a></h6>
+            </div>
+        </div>
+        {% if indexcount % 4 == 0 %}
+        <div class="clear"> </div>
+        {% end %} {% end %}
+        <div class="clear"> </div>
+    </div>
+    <div class="block5"> </div>
+    <div class="box">
+        <div class="channel"> 新车 </div>
+        <div class="block5_1"> </div>
+        {% set indexcount = 0 %}
+        {% for c in index['xinche']['data'] %}
+        {% set indexcount = indexcount + 1 %}
+        <div class="item">
+            <div class="pic"> <a class="inner" target="_blank" title="{{ c['title'] }}" href="{{ domain }}v/{{ c['id'] }}.htm"> <img height="96" width="128" alt="{{ c['title'] }}" src="{{ c['cover'] }}" /></a></div>
+            <div class="txt">
+                <h6 class="caption"> <a target="_blank" title="{{ c['title'] }}" href="{{ domain }}v/{{ c['id'] }}.htm">{{ c['showtitle'] }}</a></h6>
+            </div>
+        </div>
+        {% if indexcount % 4 == 0 %}
+        <div class="clear"> </div>
+        {% end %} {% end %}
+        <div class="clear"> </div>
+    </div>
+    <div class="block5"> </div>
+    <div class="box">
+        <div class="channel"> 漂移 </div>
+        <div class="block5_1"> </div>
+        {% set indexcount = 0 %}
+        {% for c in index['piaoyi']['data'] %}
+        {% set indexcount = indexcount + 1 %}
+        <div class="item">
+            <div class="pic"> <a class="inner" target="_blank" title="{{ c['title'] }}" href="{{ domain }}v/{{ c['id'] }}.htm"> <img height="96" width="128" alt="{{ c['title'] }}" src="{{ c['cover'] }}" /></a></div>
+            <div class="txt">
+                <h6 class="caption"> <a target="_blank" title="{{ c['title'] }}" href="{{ domain }}v/{{ c['id'] }}.htm">{{ c['showtitle'] }}</a></h6>
+            </div>
+        </div>
+        {% if indexcount % 4 == 0 %}
+        <div class="clear"> </div>
+        {% end %} {% end %}
+        <div class="clear"> </div>
+    </div>
+</div>
+<div class="right">
+    <div class="top_list">
+        <div class="box_title">
+            <h2> <span class="title">广告 - 编辑推荐</span></h2>
+        </div>
+        <div class="top_info">
+            <ol class="billboard">
+                {% set indexcount = 0 %}
+                {% for c in top['guanggao'] %} 
+                {% set indexcount = indexcount + 1 %}
+                {% if 1 == indexcount %}
+                <li class="n1">
+                    <div class="n1d">
+                        <div class="pic"> <a href="{{ domain }}v/{{ c['id'] }}.htm" title="{{ c['title'] }}" target="_blank"
+                                             class="inner"> <img height="96" width="128" src="{{ c['cover'] }}" alt="{{ c['title'] }}" /></a></div>
+                        <div class="txt">
+                            <h1 class="caption"> <a href="{{ domain }}v/{{ c['id'] }}.htm" target="_blank" title="{{ c['title'] }}">{{ c['showtitle'] }}</a></h1>
+                        </div>
+                    </div>
+                </li>
+                {% else %}
+                <li class="n{{ indexcount }}">
+                    <h1> <a target="_blank" title="{{ c['title'] }}" href="{{ domain }}v/{{ c['id'] }}.htm">{{ c['showtitle'] }}</a></h1>
+                </li>
+                {% end %} {% end %}
+            </ol>
+        </div>
+    </div>
+    <div class="top_list" style="text-align: center; border: 0;"> </div>
+    <div class="top_list">
+        <div class="box_title">
+            <h2> <span class="title">飙车 - 编辑推荐</span></h2>
+        </div>
+        <div class="top_info">
+            <ol class="billboard">
+                {% set indexcount = 0 %}
+                {% for c in top['biaoche'] %} 
+                {% set indexcount = indexcount + 1 %}
+                {% if 1 == indexcount %}
+                <li class="n1">
+                    <div class="n1d">
+                        <div class="pic"> <a href="{{ domain }}v/{{ c['id'] }}.htm" title="{{ c['title'] }}" target="_blank"
+                                             class="inner"> <img height="96" width="128" src="{{ c['cover'] }}" alt="{{ c['title'] }}" /></a></div>
+                        <div class="txt">
+                            <h1 class="caption"> <a href="{{ domain }}v/{{ c['id'] }}.htm" target="_blank" title="{{ c['title'] }}">{{ c['showtitle'] }}</a></h1>
+                        </div>
+                    </div>
+                </li>
+                {% else %}
+                <li class="n{{ indexcount }}">
+                    <h1> <a target="_blank" title="{{ c['title'] }}" href="{{ domain }}v/{{ c['id'] }}.htm"> {{ c['title'] }}</a></h1>
+                </li>
+                {% end %} {% end %}
+            </ol>
+        </div>
+    </div>
+    <div class="top_list" style="text-align: center; border: 0;"> </div>
+    <div class="top_list">
+        <div class="box_title">
+            <h2> <span class="title">比赛 - 编辑推荐</span></h2>
+        </div>
+        <div class="top_info">
+            <ol class="billboard">
+                {% set indexcount = 0 %}
+                {% for c in top['bisai'] %} 
+                {% set indexcount = indexcount + 1 %}
+                {% if 1 == indexcount %}
+                <li class="n1">
+                    <div class="n1d">
+                        <div class="pic"> <a href="{{ domain }}v/{{ c['id'] }}.htm" title="{{ c['title'] }}" target="_blank"
+                                             class="inner"> <img height="96" width="128" src="{{ c['cover'] }}" alt="{{ c['title'] }}" /></a></div>
+                        <div class="txt">
+                            <h1 class="caption"> <a href="{{ domain }}v/{{ c['id'] }}.htm" target="_blank" title="{{ c['title'] }}">{{ c['showtitle'] }}</a></h1>
+                        </div>
+                    </div>
+                </li>
+                {% else %}
+                <li class="n{{ indexcount }}">
+                    <h1> <a target="_blank" title="{{ c['title'] }}" href="{{ domain }}v/{{ c['id'] }}.htm"> {{ c['title'] }}</a></h1>
+                </li>
+                {% end %} {% end %}
+            </ol>
+        </div>
+    </div>
+    <div class="top_list" style="text-align: center; border: 0;"></div>
+    <div class="top_list">        
+        <div class="box_title">
+            <h2> <span class="title">玩车 - 编辑推荐</span></h2>
+        </div>
+        <div class="top_info">
+            <ol class="billboard">
+                {% set indexcount = 0 %}
+                {% for c in top['wanche'] %} 
+                {% set indexcount = indexcount + 1 %}
+                {% if 1 == indexcount %}
+                <li class="n1">
+                    <div class="n1d">
+                        <div class="pic"> <a href="{{ domain }}v/{{ c['id'] }}.htm" title="{{ c['title'] }}" target="_blank"  class="inner"> <img height="96" width="128" src="{{ c['cover'] }}" alt="{{ c['title'] }}" /></a></div>
+                        <div class="txt">
+                            <h1 class="caption"> <a href="{{ domain }}v/{{ c['id'] }}.htm" target="_blank" title="{{ c['title'] }}">{{ c['showtitle'] }}</a></h1>
+                        </div>
+                    </div>
+                </li>
+                {% else %}
+                <li class="n{{ indexcount }}">
+                    <h1> <a target="_blank" title="{{ c['title'] }}" href="{{ domain }}v/{{ c['id'] }}.htm"> {{ c['title'] }}</a></h1>
+                </li>
+                {% end %} {% end %}
+            </ol>
+        </div>
+    </div>
+</div>
+</div>
+<div class="link_foot">
+    <div class="box_top"> <span class="box_top_l"></span><span class="box_top_r"></span> </div>
+    <div class="box_con">
+        <ul class="link_foot_ul">
+            <li><a target="_blank" href="{{ domain }}">{{ sitename }}</a></li>
+        </ul>
+    </div>
+    <div class="box_foot"> <span class="box_foot_l"></span><span class="box_foot_r"></span> </div>
+</div>
+{% end %} 

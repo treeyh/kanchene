@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="google-site-verification" content="Xkudp7wQYyGcNOeKfmhJJFsr3ZbEbYQ-uFOa_T_Gk14" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{{ title }}</title>
+<meta name="title" content="{{ title }}">
+<meta name="keywords" content="{{ title }} 汽车 车展 车展美女 选车 视频" />
+<meta name="description" content="{{ title }} -  {{ desc }}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+<link href="{{ cssdomain }}stylev2.css?{{ version }}" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="{{ jsdomain }}jquery-1.6.1.min.js?{{ version }}"></script>
+{% block head %}{% end %}
+</head>
+<body>
+<div class="top">
+    <div class="top_t">
+        <div class="top_t_l"> <a href="{{ domain }}" title="{{ sitename }}"> <img border="0" src="{{ imgdomain }}logo.png" alt="{{ sitename }}{{ pagetitle }}" /> </a> </div>
+        <div class="top_t_r">
+            <div class="content_top"> <em id="uInfo"><strong><a title="车展" href="/s/{{ url_escape('车展') }}.htm">车展</a></strong> <strong><a
+                        title="设置为首页" href="#" onclick="javascript:addDefaultPage();return false;">设置为首页</a></strong> <strong><a title="加入收藏夹" href="#" onclick="javascript:addFavorite();return false;">加入收藏夹</a></strong></em> </div>
+            <div class="box_gray">
+                <input type="text" value="美女" id="txtSearch" class="sswf_input" name="kw" />
+                <input type="button" value="视频搜索" class="sswf_but" id="btsearch" name="searchVideo" />
+            </div>
+        </div>
+    </div>
+</div>
+<div id="menu_out">
+    <div id="menu_in">
+        <div id="menu">
+            <ul id="nav">
+                <li><a class="nav_off" id="mynav0" href="{{ domain }}"><span>首页</span></a></li>
+                <li class="menu_line"></li>
+                <li><a href="{{ domain }}zixun/" id="mynav1" class="nav_off"><span>车讯</span></a></li>
+                <li class="menu_line"></li>
+                <li><a href="{{ domain }}chezhan/" id="mynav2" class="nav_off"><span>车展</span></a></li>
+                <li class="menu_line"></li>
+                <li><a href="{{ domain }}meinv/" id="mynav3" class="nav_off"><span>车展美女</span></a></li>
+                <li class="menu_line"></li>
+                <li><a href="{{ domain }}redian/" id="mynav4" class="nav_off"><span>热点</span></a></li>
+                <li class="menu_line"></li>
+                <li><a href="{{ domain }}xuanche/" id="mynav5" class="nav_off"><span>选车</span></a></li>
+                <li class="menu_line"></li>
+                <li><a href="{{ domain }}shijia/" id="mynav6" class="nav_off"><span>试驾</span></a></li>
+                <li class="menu_line"></li>
+                <li><a href="{{ domain }}saiche/" id="mynav7" class="nav_off"><span>赛车</span></a></li>
+                <li class="menu_line"></li>
+                <li><a href="{{ domain }}wanche/" id="mynav8" class="nav_off"><span>玩车</span></a></li>
+                <li class="menu_line"></li>
+                <li><a class="nav_off" id="mynav9" href="{{ domain }}piaoyi/"><span>漂移</span></a></li>
+                <li class="menu_line"></li>
+                <li><a class="nav_off" id="mynav10" href="{{ domain }}guanggao/"><span>广告</span></a></li>
+                <li class="menu_line"></li>
+                <li><a class="nav_off" id="mynav11" href="{{ domain }}paoche/"><span>跑车</span></a></li>
+                <li class="menu_line"></li>
+                <li><a class="nav_off" id="mynav12" href="{{ domain }}all/"><span>全部视频</span></a></li>
+                <li class="menu_line"></li>
+            </ul>
+            <div id="menu_con">
+                <div id="qh_con0" style="display: none"> </div>
+                <div id="qh_con1" style="display: none"> </div>
+                <div id="qh_con2" style="display: none"> </div>
+                <div id="qh_con3" style="display: none"> </div>
+                <div id="qh_con4" style="display: none"> </div>
+                <div id="qh_con5" style="display: none"> </div>
+                <div id="qh_con6" style="display: none"> </div>
+                <div id="qh_con7" style="display: none"> </div>
+                <div id="qh_con8" style="display: none"> </div>
+                <div id="qh_con9" style="display: none"> </div>
+                <div id="qh_con10" style="display: none"> </div>
+                <div id="qh_con11" style="display: none">
+                    <ul>
+                        <li><a href="{{ domain }}s/{{ url_escape('车展') }}.htm" title="车展"><span>车展</span></a></li>
+                        <li class="menu_line2"></li>
+                        <li><a href="{{ domain }}s/{{ url_escape('概念车') }}.htm" title="概念车"><span>概念车</span></a></li>
+                        <li class="menu_line2"></li>
+                        <li><a href="{{ domain }}s/{{ url_escape('漂移') }}.htm" title="漂移"><span>漂移</span></a></li>
+                        <li class="menu_line2"></li>
+                        <li><a href="{{ domain }}s/{{ url_escape('改装车') }}.htm" title="改装车"><span>改装车</span></a></li>
+                        <li class="menu_line2"></li>
+                        <li><a href="{{ domain }}s/{{ url_escape('法拉利') }}.htm" title="法拉利"><span>法拉利</span></a></li>
+                        <li class="menu_line2"></li>
+                        <li><a href="{{ domain }}s/{{ url_escape('兰博基尼') }}.htm" title="兰博基尼"><span>兰博基尼</span></a></li>
+                        <li class="menu_line2"></li>
+                        <li><a href="{{ domain }}s/{{ url_escape('雪佛兰大黄蜂') }}.htm" title="雪佛兰大黄蜂"><span>雪佛兰大黄蜂</span></a></li>
+                        <li class="menu_line2"></li>
+                    </ul>
+                </div>
+                <div id="qh_con12" style="display: none"> </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="block10"> </div>
+<script language="javascript" type="text/javascript">
+<!--
+var domain = 'www.kanchene.com';
+-->
+</script>
+<script language="javascript" type="text/javascript" src="{{ jsdomain }}menu.js?{{ version }}"></script>
+<script language="javascript" type="text/javascript" src="{{ jsdomain }}search.js?{{ version }}"></script>
+<div class="body"> {% block body %}{% end %} </div>
+<div class="block5"> </div>
+<div class="foot"> <a href="{{ escape(domain) }}">{{ escape(sitename) }}</a>
+    <!--| <a href="javascript:void(0);" disabled="disabled">关于我们</a> | <a href="javascript:void(0);" disabled="disabled">广告服务</a>  | <a href="javascript:void(0);" disabled="disabled">客服中心</a> | <a href="javascript:void(0);" disabled="disabled">网站导航</a> | <a href="javascript:void(0);" disabled="disabled">联系我们</a><br />-->
+    Copyright © 开站时间.2009.6.16 www.kanchene.com<br />
+    看车呢 站长Email：yuhai717#163.com("#"号替换为"@"符号) 沪ICP备09093645号-1
+    <script language="javascript"
+            src="http://count10.51yes.com/click.aspx?id=108407141&logo=1" charset="gb2312"></script>
+    <script src="http://s87.cnzz.com/stat.php?id=1706921&web_id=1706921" language="JavaScript"
+            charset="gb2312"></script>
+    <script src="http://exp.jiankongbao.com/loadtrace.php?host_id=436&style=4" type="text/javascript"></script>
+    <br />
+</div>
+</body>
+</html>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27933914-1']);
+  _gaq.push(['_setDomainName', 'kanchene.com']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
