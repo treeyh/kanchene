@@ -1,3 +1,5 @@
+
+
 var Menu = {
 	_channel : { 's': 0, 'zixun': 1, 'chezhan': 2, 'meinv': 3, 'redian': 4, 'xuanche': 5, 'shijia': 6, 'saiche': 7, 'wanche': 8, 'piaoyi': 9, 'guanggao': 10, 'paoche': 11, 'all': 12 },
 	nowChannel : 0,
